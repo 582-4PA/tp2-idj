@@ -1,4 +1,6 @@
-# TP #2 : Produire une application Web avec des composants `React` modulaires, intégrant une interface utilisateur réactive en temps réel et animée, et exploitant un environnement informatique nuagique (`Firebase`, `Firestore`, `Firebase Authentication`, `Firebase Storage`, et `Firebase Hosting`).
+# TP #2 : Intégration `React`/`Firebase` 
+## Environnement nuagique `Firebase` à intégrer : `Firestore`, `Firebase Authentication`, `Firebase Storage`, et `Firebase Hosting`
+
 ## Travail d'équipe permis (mais pas plus de 2 personnes par équipe).
 
 >Si vous travaillez en équipe, les deux personnes doivent accepter les fichiers du TP sur *GitHub Classroom*.
@@ -8,7 +10,7 @@
 >Divisez le travail dans l'équipe de façon à simplifier/faciliter ces fusions (expérimentez, c'est le moment idéal !)
 
 ## Objectif/exigences généraux
-* Vous créez une application `React` monopage nommée *Image du jour* dont les fonctionnalités sont les mêmes que l'application `PHP` donnée en exemple, et disponible en tout temps à l'URL (suivante)[https://csemaan.webdev.cmaisonneuve.qc.ca/idj/]
+* Vous créez une application `React` monopage nommée *Image du jour* dont les fonctionnalités sont les mêmes que l'application `PHP` donnée en exemple (*démo* dans l'image au bas de ce devis), et disponible en tout temps à l'URL **[suivante](https://csemaan.webdev.cmaisonneuve.qc.ca/idj/)** (cette page est accessible à partir des ordinateurs du *Collège* normalement, mais de l'extérieur du Collège, il faut configurer l'accès `VPN` : si vous avez des questions, on en parle en classe ou sur *Teams*)
 
 * Vous devez créer une application ayant les mêmes fonctionnalités que l'application `PHP` donnée en *démo*, mais par contre la conception graphique, et l'interactivité peuvent s'en écarter partiellement ou talaement (à vous de décider !)
 
@@ -16,7 +18,7 @@
 
 * Les images utilisées dans l'application sont stockées dans `Firebase Storage`
 
-* La gestion des utilisateurs est faite avec `Firebase Authentication` (uniquement `Google Provider` est demandé, mais si vous voulez implémenter plus de moyen d'authentification, vous êtes bien sûr libre de le faire)
+* La gestion des utilisateurs est faite avec `Firebase Authentication` (uniquement `Google Provider` est demandé, mais si vous voulez implémenter plus de modes d'authentification, vous êtes bien sûr libre de le faire)
 
 * Les données utilisateurs de l'application sont stockées et gérées dans `Firebase Firestore` ; certaines données doivent être gérées en temps réel (par exemple, le *plébiscite*, les *commentaires*, et les *votes* sur les commentaires)
 
@@ -86,6 +88,6 @@
 
 ---
 
->ATTENTION : la démo ci-dessous est pour inspiration seulement, en particulier la gestion des utilisateurs dans le TP #2 doivent être faite avec `Google Authentication Provider` et non pas avec *pseudo/mot de passe* comme illustrée dans cette démo.
+>ATTENTION : la démo ci-dessous est pour inspiration seulement, en particulier la gestion des utilisateurs dans le TP #2 doit être faite avec `Google Authentication Provider` et non pas avec *pseudo/mot de passe* comme illustrée dans cette démo.
 
 <img src="/demo.gif" alt="demo de la solution" title="Démo de la version PHP" />
