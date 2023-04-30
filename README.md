@@ -43,14 +43,14 @@
 
 6. Produisez les fonctionnalités requises par l'interactivité de votre application : 
     1. Afficher une *image du jour* pour le jour courant, et toutes les données associées à partir de `Firestore` 
-       Chaque *image* a les caractéristiques suivantes : 
+       Une *image* a les caractéristiques suivantes : 
        1. *identifiant* : je suggère d'utiliser la date du jour en format **AAAAMMJJ**
        2. *description* (optionnel)
        3. *url* : adresse *http* sur `Firebase Storage` de l'image
        4. *statut aime* ou *plebiscite* de l'image : un tableau contenant les identifiants des utilisateurs ayant *aimé* cette image
        5. Un ensemble de commentaires associés à l'image (affichés par date d'ajout en ordre chronologique descendant)
 
-       Chaque commentaire a les caractéristiques suivantes : 
+       Un commentaire a les caractéristiques suivantes : 
        1. *identifiant* : je suggère de laisser `Firestore` le générer dynamiquement
        2. *texte* : texte du commentaire
        3. *nom de l'utilisateur* : nom de l'utilisateur ayant laissé le commentaire
@@ -58,7 +58,7 @@
        5. *timestamp* : temps en millisecondes dans l'ère Unix (pas affiché, mais utilisé pour ordonner l'affichage des commentaires)
        6. *votes* : un tableau associatif (*map*) contenant les votes laissés par les utilisateurs sur ce commentaire
 
-       Chaque utilisateur a les caractéristiques suivantes : 
+       Un utilisateur a les caractéristiques suivantes : 
        1. *identifiant* : c'est l'identifiant retourné par `Firebase Authentication`
        2. *nom* : c'est la valeur retournée par `Google Provider`
        3. *avatar* : c'est la valeur retournée par `Google Provider`
@@ -67,6 +67,8 @@
        (suggestion 1 : une seule *collection* `Firestore` est nécessaire pour gérer les images avec toutes leurs données associées, et une deuxième collection **séparée** pour gérer les utilisateurs)
 
        >IMPORTANT : l'affichage du *plébisicite*, des *commentaires* et des *votes* doivent raffraîchir l'interface utilisateur de tous les navigateurs connectés à l'application **en temps réel** (sans nécéssiter un rffraîchissement manuel de la page Web)
+
+       >IMPORTANT : l'affichage d'un *commentaire* est *priorisé*/*pénalisé* selon le différentiel de votes *positifs*/*négatifs* qu'il a reçu (à vous de déterminer le mode exacte d'implémentation de cette fonctionnalité : vous n'êtes pas obligé de vous en tenir à ce qui est montré dans la *démo*)
 
     2. Afficher l'image du jour pour le jour *précédent* ou le jour *suivant*, ou le *premier* jour (date de la première image du jour), ou le *dernier* jour (jour courant ou *aujourd'hui*)
     3. Se connecter/déconnecter avec `Google` (utiliser `Firebase Authentication`)
